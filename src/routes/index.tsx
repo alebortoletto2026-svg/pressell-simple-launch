@@ -69,15 +69,13 @@ function Index() {
       {/* BLOCO 5 — Autoridade */}
       <section className="px-6 py-12 sm:py-16">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 sm:flex-row sm:items-start sm:gap-10">
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex w-full max-w-[320px] flex-shrink-0 flex-col items-center gap-3 sm:max-w-[360px]">
             <img
               src="/alessandro-bortoletto.webp"
               alt="Alessandro Bortoletto, coach certificado pelo IBC"
-              width={700}
-              height={933}
-              className="aspect-[3/4] w-full max-w-[280px] rounded-2xl object-cover shadow-md"
+              className="aspect-[3/4] w-full rounded-2xl object-cover shadow-md"
             />
-            <p className="max-w-[280px] text-center text-sm leading-relaxed text-[#2C2C2C]/80">
+            <p className="max-w-[320px] text-center text-sm leading-relaxed text-[#2C2C2C]/80 sm:max-w-[360px]">
               Atendimento presencial em Florianópolis, Palhoça, São José e região — e também online
               para todo o Brasil.
             </p>

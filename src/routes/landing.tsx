@@ -107,12 +107,10 @@ function Landing() {
       {/* BLOCO 6 — Autoridade */}
       <section className="px-6 py-12 sm:py-16">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-center">
-          <div className="mx-auto flex w-full max-w-[280px] flex-col items-center gap-3 sm:mx-0">
+          <div className="mx-auto flex w-full max-w-[320px] flex-shrink-0 flex-col items-center gap-3 sm:mx-0 sm:max-w-[360px]">
             <img
               src="/alessandro-bortoletto.webp"
               alt="Alessandro Bortoletto, coach certificado pelo IBC"
-              width={700}
-              height={933}
               className="aspect-[3/4] w-full rounded-2xl object-cover shadow-md"
             />
           </div>
