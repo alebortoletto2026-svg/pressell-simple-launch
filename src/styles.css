@@ -142,3 +142,11 @@
     color: var(--color-foreground);
   }
 }
+
+.presell-page {
+  font-family: "Lato", "Source Sans Pro", sans-serif;
+}
+
+.presell-page .font-heading {
+  font-family: "Playfair Display", "Cormorant Garamond", serif;
+}
