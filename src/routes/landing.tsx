@@ -22,9 +22,11 @@ const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponen
 function WhatsAppButton({
   className = "",
   variant = "onWine",
+  label = "Quero dar o primeiro passo →",
 }: {
   className?: string;
   variant?: "onWine" | "solid";
+  label?: string;
 }) {
   const variantClass =
     variant === "solid"
@@ -38,7 +40,7 @@ function WhatsAppButton({
       rel="noopener noreferrer"
       className={`flex min-h-[48px] items-center justify-center rounded-lg px-8 py-4 text-center text-[18px] font-bold transition-colors ${variantClass} ${className}`}
     >
-      Quero dar o primeiro passo →
+      {label}
     </a>
   );
 }
@@ -113,7 +115,11 @@ function Landing() {
             palestra. É um espaço criado especificamente para você — para entender onde está, o que
             quer e como chegar lá. Com clareza, com apoio e no seu ritmo.
           </p>
-          <WhatsAppButton variant="solid" className="w-full sm:w-auto" />
+          <WhatsAppButton
+            variant="solid"
+            label="Quero entender como funciona →"
+            className="w-full sm:w-auto"
+          />
         </div>
       </section>
 
@@ -265,6 +271,7 @@ function Landing() {
             Se você se identificou com pelo menos um desses pontos, a conversa gratuita foi feita
             para você.
           </p>
+          <WhatsAppButton variant="solid" className="w-full sm:w-auto" />
         </div>
       </section>
 
