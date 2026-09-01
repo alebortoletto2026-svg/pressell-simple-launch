@@ -19,13 +19,24 @@ const WHATSAPP_MESSAGE =
   "Olá Alessandro, vi sua página e gostaria de saber mais sobre o processo de coaching para mulheres na maturidade.";
 const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
-function WhatsAppButton({ className = "" }: { className?: string }) {
+function WhatsAppButton({
+  className = "",
+  variant = "onWine",
+}: {
+  className?: string;
+  variant?: "onWine" | "solid";
+}) {
+  const variantClass =
+    variant === "solid"
+      ? "bg-[#7B2C3B] text-white hover:bg-[#671f2c]"
+      : "bg-white text-[#7B2C3B] hover:bg-[#EDE0DA]";
+
   return (
     <a
       href={WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
-      className={`flex min-h-[48px] items-center justify-center rounded-lg bg-white px-8 py-4 text-center text-[18px] font-bold text-[#7B2C3B] transition-colors hover:bg-[#EDE0DA] ${className}`}
+      className={`flex min-h-[48px] items-center justify-center rounded-lg px-8 py-4 text-center text-[18px] font-bold transition-colors ${variantClass} ${className}`}
     >
       Quero dar o primeiro passo →
     </a>
@@ -84,6 +95,7 @@ function Landing() {
             falta de informação — é falta de direção. É não saber mais quem você é fora dos papéis
             que sempre desempenhou.
           </p>
+          <p>Durante décadas, sua identidade tinha endereço certo.</p>
           <p>
             Mãe. Esposa. Profissional. Cuidadora. Quando esses papéis mudam ou somem — o que sobra?
           </p>
@@ -92,7 +104,7 @@ function Landing() {
 
       {/* BLOCO 5 — Virada */}
       <section className="bg-white px-6 py-12 text-center sm:py-16">
-        <div className="mx-auto flex max-w-xl flex-col gap-4">
+        <div className="mx-auto flex max-w-xl flex-col items-center gap-5">
           <h2 className="font-heading text-2xl font-semibold text-[#7B2C3B] sm:text-3xl">
             Essa pergunta tem resposta. E você não precisa encontrá-la sozinha.
           </h2>
@@ -101,42 +113,11 @@ function Landing() {
             palestra. É um espaço criado especificamente para você — para entender onde está, o que
             quer e como chegar lá. Com clareza, com apoio e no seu ritmo.
           </p>
+          <WhatsAppButton variant="solid" className="w-full sm:w-auto" />
         </div>
       </section>
 
-      {/* BLOCO 6 — Autoridade */}
-      <section className="px-6 py-12 sm:py-16">
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-center">
-          <div className="mx-auto flex w-full max-w-[320px] flex-shrink-0 flex-col items-center gap-3 sm:mx-0 sm:max-w-[360px]">
-            <img
-              src="/alessandro-bortoletto.webp"
-              alt="Alessandro Bortoletto, coach certificado pelo IBC"
-              className="aspect-[3/4] w-full rounded-2xl object-cover shadow-md"
-            />
-          </div>
-          <div className="flex max-w-md flex-col items-center gap-3 text-center sm:items-start sm:text-left">
-            <div>
-              <p className="font-heading text-xl font-semibold text-[#7B2C3B]">
-                Alessandro Bortoletto
-              </p>
-              <p className="text-[15px] text-[#2C2C2C]/80">
-                Coach certificado | Especialista em transições de vida na maturidade feminina
-              </p>
-              <div className="mt-3 h-px w-16 bg-[#7B2C3B] sm:mx-0" />
-            </div>
-            <p className="text-[17px] italic leading-relaxed">
-              "Trabalho com mulheres que chegam até mim se sentindo invisíveis para o mundo — e saem
-              sabendo exatamente quem são e o que querem da vida que ainda têm pela frente."
-            </p>
-            <p className="text-[17px] leading-relaxed">
-              Atendimento presencial em Florianópolis, Palhoça, São José, Biguaçu e região — e
-              também online para todo o Brasil.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* BLOCO 7 — O que você vai encontrar */}
+      {/* BLOCO 6 — O que você vai encontrar */}
       <section className="bg-[#EDE0DA] px-6 py-12 sm:py-16">
         <div className="mx-auto flex max-w-3xl flex-col gap-8">
           <h2 className="font-heading text-center text-xl font-semibold text-[#7B2C3B] sm:text-2xl">
@@ -179,7 +160,7 @@ function Landing() {
         </div>
       </section>
 
-      {/* BLOCO 8 — Prova social */}
+      {/* BLOCO 7 — Prova social */}
       <section className="bg-[#F5EDE8] px-6 py-12 sm:py-16">
         <div className="mx-auto flex max-w-3xl flex-col gap-8">
           <h2 className="font-heading text-center text-xl font-semibold text-[#7B2C3B] sm:text-2xl">
@@ -233,6 +214,38 @@ function Landing() {
         </div>
       </section>
 
+      {/* BLOCO 8 — Autoridade */}
+      <section className="px-6 py-12 sm:py-16">
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-center">
+          <div className="mx-auto flex w-full max-w-[320px] flex-shrink-0 flex-col items-center gap-3 sm:mx-0 sm:max-w-[360px]">
+            <img
+              src="/alessandro-bortoletto.webp"
+              alt="Alessandro Bortoletto, coach certificado pelo IBC"
+              className="aspect-[3/4] w-full rounded-2xl object-cover shadow-md"
+            />
+          </div>
+          <div className="flex max-w-md flex-col items-center gap-3 text-center sm:items-start sm:text-left">
+            <div>
+              <p className="font-heading text-xl font-semibold text-[#7B2C3B]">
+                Alessandro Bortoletto
+              </p>
+              <p className="text-[15px] text-[#2C2C2C]/80">
+                Coach certificado | Especialista em transições de vida na maturidade feminina
+              </p>
+              <div className="mt-3 h-px w-16 bg-[#7B2C3B] sm:mx-0" />
+            </div>
+            <p className="text-[17px] italic leading-relaxed">
+              "Trabalho com mulheres que chegam até mim se sentindo invisíveis para o mundo — e saem
+              sabendo exatamente quem são e o que querem da vida que ainda têm pela frente."
+            </p>
+            <p className="text-[17px] leading-relaxed">
+              Atendimento presencial em Florianópolis, Palhoça, São José, Biguaçu e região — e
+              também online para todo o Brasil.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* BLOCO 9 — Pré-CTA (qualificação leve) */}
       <section className="bg-white px-6 py-12 text-center sm:py-16">
         <div className="mx-auto flex max-w-xl flex-col gap-4">
@@ -255,7 +268,7 @@ function Landing() {
         </div>
       </section>
 
-      {/* BLOCO 10 — CTA final */}
+      {/* BLOCO 10 — CTA final (fim da página) */}
       <section className="bg-[#7B2C3B] px-6 py-14 text-center text-white sm:py-20">
         <div className="mx-auto flex max-w-xl flex-col items-center gap-5">
           <h2 className="font-heading text-2xl font-semibold sm:text-3xl">
