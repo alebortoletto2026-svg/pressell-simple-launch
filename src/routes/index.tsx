@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -13,6 +13,11 @@ export const Route = createFileRoute("/")({
   }),
   component: Index,
 });
+
+const WHATSAPP_NUMBER = "5548935000948";
+const WHATSAPP_MESSAGE =
+  "Olá Alessandro, vi sua página e gostaria de saber mais sobre o processo de coaching para mulheres na maturidade.";
+const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 function Index() {
   return (
@@ -171,11 +176,14 @@ function Index() {
             Pronta para dar o primeiro passo?
           </h2>
           <p className="text-[17px] leading-relaxed">
-            Clique abaixo, preencha um formulário rápido e agende uma conversa gratuita — presencial
-            ou online. Sem compromisso. Só clareza.
+            Clique abaixo e me chame no WhatsApp. Vou te responder pessoalmente e, se fizer sentido
+            para você, agendamos uma conversa gratuita — presencial ou online. Sem compromisso. Só
+            clareza.
           </p>
           <a
-            href="/vendas"
+            href={WHATSAPP_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex min-h-[48px] w-full items-center justify-center rounded-md bg-white px-8 text-center text-[17px] font-semibold text-[#7B2C3B] transition-colors hover:bg-[#EDE0DA] sm:w-auto"
           >
             Quero conversar com Alessandro →
@@ -187,13 +195,13 @@ function Index() {
       <footer className="bg-[#2C2C2C] px-6 py-6 text-center text-white">
         <p className="text-sm">© 2026 Alessandro Bortoletto — Coach de Vida | Florianópolis, SC</p>
         <p className="mt-2 text-sm">
-          <a href="#" className="underline hover:text-[#C9A227]">
+          <Link to="/politica-de-privacidade" className="underline hover:text-[#C9A227]">
             Política de Privacidade
-          </a>
+          </Link>
           <span className="mx-2">·</span>
-          <a href="#" className="underline hover:text-[#C9A227]">
+          <Link to="/termos-de-uso" className="underline hover:text-[#C9A227]">
             Termos de Uso
-          </a>
+          </Link>
         </p>
       </footer>
     </main>
