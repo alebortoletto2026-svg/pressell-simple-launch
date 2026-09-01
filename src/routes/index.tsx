@@ -70,11 +70,13 @@ function Index() {
       <section className="px-6 py-12 sm:py-16">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 sm:flex-row sm:items-start sm:gap-10">
           <div className="flex flex-col items-center gap-3">
-            <div className="aspect-[3/4] w-full max-w-[280px] overflow-hidden rounded-2xl bg-[#E4D9D0]">
-              <div className="flex h-full items-center justify-center px-4 text-center text-sm font-medium uppercase tracking-wide text-[#8a7a70]">
-                Foto Alessandro (blazer bege)
-              </div>
-            </div>
+            <img
+              src="/alessandro-bortoletto.webp"
+              alt="Alessandro Bortoletto, coach certificado pelo IBC"
+              width={700}
+              height={933}
+              className="aspect-[3/4] w-full max-w-[280px] rounded-2xl object-cover shadow-md"
+            />
             <p className="max-w-[280px] text-center text-sm leading-relaxed text-[#2C2C2C]/80">
               Atendimento presencial em Florianópolis, Palhoça, São José e região — e também online
               para todo o Brasil.
