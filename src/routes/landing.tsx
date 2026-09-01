@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/landing")({
   head: () => ({
@@ -274,13 +274,13 @@ function Landing() {
       <footer className="bg-[#2C2C2C] px-6 py-6 text-center text-white">
         <p className="text-sm">© 2026 Alessandro Bortoletto — Coach de Vida | Florianópolis, SC</p>
         <p className="mt-2 text-sm">
-          <a href="#privacidade" className="underline hover:text-[#C9A227]">
+          <Link to="/politica-de-privacidade" className="underline hover:text-[#C9A227]">
             Política de Privacidade
-          </a>
+          </Link>
           <span className="mx-2">·</span>
-          <a href="#termos" className="underline hover:text-[#C9A227]">
+          <Link to="/termos-de-uso" className="underline hover:text-[#C9A227]">
             Termos de Uso
-          </a>
+          </Link>
         </p>
       </footer>
 
