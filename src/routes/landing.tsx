@@ -14,7 +14,7 @@ export const Route = createFileRoute("/landing")({
   component: Landing,
 });
 
-const WHATSAPP_NUMBER = "5548XXXXXXXXX";
+const WHATSAPP_NUMBER = "5548935000948";
 const WHATSAPP_MESSAGE =
   "Olá Alessandro, vi sua página e gostaria de saber mais sobre o processo de coaching para mulheres na maturidade.";
 const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
