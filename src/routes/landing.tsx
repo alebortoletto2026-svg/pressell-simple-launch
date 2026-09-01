@@ -108,11 +108,13 @@ function Landing() {
       <section className="px-6 py-12 sm:py-16">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-center">
           <div className="mx-auto flex w-full max-w-[280px] flex-col items-center gap-3 sm:mx-0">
-            <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl bg-[#E4D9D0] shadow-md">
-              <div className="flex h-full items-center justify-center px-4 text-center text-sm font-medium uppercase tracking-wide text-[#8a7a70]">
-                Foto Alessandro (blazer bege)
-              </div>
-            </div>
+            <img
+              src="/alessandro-bortoletto.webp"
+              alt="Alessandro Bortoletto, coach certificado pelo IBC"
+              width={700}
+              height={933}
+              className="aspect-[3/4] w-full rounded-2xl object-cover shadow-md"
+            />
           </div>
           <div className="flex max-w-md flex-col items-center gap-3 text-center sm:items-start sm:text-left">
             <div>
