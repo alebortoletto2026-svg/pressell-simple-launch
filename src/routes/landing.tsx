@@ -226,7 +226,7 @@ function Landing() {
           <div className="flex max-w-md flex-col items-center gap-3 text-center sm:items-start sm:text-left">
             <div>
               <p className="font-heading text-xl font-semibold text-[#7B2C3B]">
-                Eloar Alessandro Bortoletto
+                Alessandro Bortoletto
               </p>
               <p className="text-[15px] text-[#2C2C2C]/80">
                 Coach certificado | Especialista em transições de vida na maturidade feminina
