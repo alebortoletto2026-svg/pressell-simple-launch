@@ -14,11 +14,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WHATSAPP_NUMBER = "5548935000948";
-const WHATSAPP_MESSAGE =
-  "Olá Alessandro, vi sua página e gostaria de saber mais sobre o processo de coaching para mulheres na maturidade.";
-const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
-
 function Index() {
   return (
     <main className="presell-page min-h-screen bg-[#F5EDE8] text-[#2C2C2C]">
@@ -176,18 +171,15 @@ function Index() {
             Pronta para dar o primeiro passo?
           </h2>
           <p className="text-[17px] leading-relaxed">
-            Clique abaixo e me chame no WhatsApp. Vou te responder pessoalmente e, se fizer sentido
-            para você, agendamos uma conversa gratuita — presencial ou online. Sem compromisso. Só
-            clareza.
+            Clique abaixo e preencha sua ficha de seleção. Vou analisar pessoalmente e entrar em
+            contato para conversarmos — presencial ou online. Sem compromisso. Só clareza.
           </p>
-          <a
-            href={WHATSAPP_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/selecao"
             className="flex min-h-[48px] w-full items-center justify-center rounded-md bg-white px-8 text-center text-[17px] font-semibold text-[#7B2C3B] transition-colors hover:bg-[#EDE0DA] sm:w-auto"
           >
             Quero conversar com Alessandro →
-          </a>
+          </Link>
         </div>
       </section>
 
