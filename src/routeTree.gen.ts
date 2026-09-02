@@ -11,7 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LandingRouteImport } from './routes/landing'
+import { Route as ObrigadaRouteImport } from './routes/obrigada'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
+import { Route as SelecaoRouteImport } from './routes/selecao'
 import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
 import { Route as VendasRouteImport } from './routes/vendas'
 
@@ -25,9 +27,19 @@ const LandingRoute = LandingRouteImport.update({
   path: '/landing',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ObrigadaRoute = ObrigadaRouteImport.update({
+  id: '/obrigada',
+  path: '/obrigada',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
   id: '/politica-de-privacidade',
   path: '/politica-de-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SelecaoRoute = SelecaoRouteImport.update({
+  id: '/selecao',
+  path: '/selecao',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TermosDeUsoRoute = TermosDeUsoRouteImport.update({
@@ -44,14 +56,18 @@ const VendasRoute = VendasRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/landing': typeof LandingRoute
+  '/obrigada': typeof ObrigadaRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/selecao': typeof SelecaoRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/vendas': typeof VendasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/landing': typeof LandingRoute
+  '/obrigada': typeof ObrigadaRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/selecao': typeof SelecaoRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/vendas': typeof VendasRoute
 }
@@ -59,22 +75,38 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/landing': typeof LandingRoute
+  '/obrigada': typeof ObrigadaRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/selecao': typeof SelecaoRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/vendas': typeof VendasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/landing' | '/politica-de-privacidade' | '/termos-de-uso' | '/vendas'
+    | '/'
+    | '/landing'
+    | '/obrigada'
+    | '/politica-de-privacidade'
+    | '/selecao'
+    | '/termos-de-uso'
+    | '/vendas'
   fileRoutesByTo: FileRoutesByTo
   to:
-    '/' | '/landing' | '/politica-de-privacidade' | '/termos-de-uso' | '/vendas'
+    | '/'
+    | '/landing'
+    | '/obrigada'
+    | '/politica-de-privacidade'
+    | '/selecao'
+    | '/termos-de-uso'
+    | '/vendas'
   id:
     | '__root__'
     | '/'
     | '/landing'
+    | '/obrigada'
     | '/politica-de-privacidade'
+    | '/selecao'
     | '/termos-de-uso'
     | '/vendas'
   fileRoutesById: FileRoutesById
@@ -82,7 +114,9 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   LandingRoute: typeof LandingRoute
+  ObrigadaRoute: typeof ObrigadaRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
+  SelecaoRoute: typeof SelecaoRoute
   TermosDeUsoRoute: typeof TermosDeUsoRoute
   VendasRoute: typeof VendasRoute
 }
@@ -103,11 +137,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LandingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/obrigada': {
+      id: '/obrigada'
+      path: '/obrigada'
+      fullPath: '/obrigada'
+      preLoaderRoute: typeof ObrigadaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/politica-de-privacidade': {
       id: '/politica-de-privacidade'
       path: '/politica-de-privacidade'
       fullPath: '/politica-de-privacidade'
       preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/selecao': {
+      id: '/selecao'
+      path: '/selecao'
+      fullPath: '/selecao'
+      preLoaderRoute: typeof SelecaoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/termos-de-uso': {
@@ -130,7 +178,9 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   LandingRoute: LandingRoute,
+  ObrigadaRoute: ObrigadaRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
+  SelecaoRoute: SelecaoRoute,
   TermosDeUsoRoute: TermosDeUsoRoute,
   VendasRoute: VendasRoute,
 }

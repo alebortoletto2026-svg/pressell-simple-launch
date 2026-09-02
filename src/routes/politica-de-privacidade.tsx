@@ -52,15 +52,20 @@ function PoliticaDePrivacidade() {
               2. Quais dados este site coleta
             </h2>
             <p>
-              Este site não possui formulários de cadastro, captura de e-mail ou qualquer campo que
-              peça dados pessoais diretamente. O único ponto de contato oferecido é o botão de
-              WhatsApp, que abre uma conversa fora deste site, diretamente no aplicativo do
-              WhatsApp.
+              Este site tem dois pontos de contato: o botão de WhatsApp, que abre uma conversa fora
+              deste site, e a Ficha de Seleção, um formulário voluntário para quem deseja se
+              candidatar à Sessão de Grandes Desafios gratuita.
             </p>
             <p>
-              Ao clicar nesse botão, você decide o que compartilhar na conversa — nome, telefone e
-              qualquer outra informação enviada ali são tratados diretamente por Alessandro
-              Bortoletto, dentro do próprio WhatsApp, e não ficam armazenados neste site.
+              Ao clicar no botão de WhatsApp, você decide o que compartilhar na conversa — nome,
+              telefone e qualquer outra informação enviada ali são tratados diretamente por
+              Alessandro Bortoletto, dentro do próprio WhatsApp, e não ficam armazenados neste site.
+            </p>
+            <p>
+              Ao preencher a Ficha de Seleção, você envia voluntariamente seu nome e as respostas às
+              perguntas do formulário, incluindo informações sobre seus objetivos, dificuldades e
+              uma faixa aproximada de renda mensal. Esses dados são usados exclusivamente para
+              avaliar sua candidatura à sessão gratuita.
             </p>
             <p>
               Como qualquer site, o servidor que hospeda esta página pode registrar automaticamente
@@ -74,10 +79,26 @@ function PoliticaDePrivacidade() {
               3. Como esses dados são usados
             </h2>
             <p>
-              As informações trocadas via WhatsApp são usadas exclusivamente para responder ao seu
-              contato, entender sua necessidade e, se fizer sentido para você, agendar uma conversa
-              sobre o processo de coaching. Nenhuma informação é vendida, alugada ou compartilhada
-              com terceiros para fins comerciais.
+              As informações trocadas via WhatsApp ou enviadas pela Ficha de Seleção são usadas
+              exclusivamente para responder ao seu contato, avaliar sua candidatura e, se fizer
+              sentido, agendar uma conversa sobre o processo de coaching. Nenhuma informação é
+              vendida, alugada ou compartilhada com terceiros para fins comerciais.
+            </p>
+            <p>
+              A Ficha de Seleção é processada pela Formspree (Formspree, Inc.), uma plataforma de
+              formulários que recebe e encaminha as respostas por e-mail. Isso significa que seus
+              dados passam pelos servidores dessa empresa antes de chegar até Alessandro Bortoletto.
+              A Formspree atua como operadora dos dados nesse processo e mantém sua própria política
+              de privacidade, disponível em{" "}
+              <a
+                href="https://formspree.io/legal/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                formspree.io/legal/privacy-policy
+              </a>
+              .
             </p>
           </div>
 

@@ -14,12 +14,7 @@ export const Route = createFileRoute("/landing")({
   component: Landing,
 });
 
-const WHATSAPP_NUMBER = "5548935000948";
-const WHATSAPP_MESSAGE =
-  "Olá Alessandro, vi sua página e gostaria de saber mais sobre o processo de coaching para mulheres na maturidade.";
-const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
-
-function WhatsAppButton({
+function SelecaoButton({
   className = "",
   variant = "onWine",
   label = "Quero dar o primeiro passo →",
@@ -34,14 +29,12 @@ function WhatsAppButton({
       : "bg-white text-[#7B2C3B] hover:bg-[#EDE0DA]";
 
   return (
-    <a
-      href={WHATSAPP_HREF}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      to="/selecao"
       className={`flex min-h-[48px] items-center justify-center rounded-lg px-8 py-4 text-center text-[18px] font-bold transition-colors ${variantClass} ${className}`}
     >
       {label}
-    </a>
+    </Link>
   );
 }
 
@@ -115,7 +108,7 @@ function Landing() {
             palestra. É um espaço criado especificamente para você — para entender onde está, o que
             quer e como chegar lá. Com clareza, com apoio e no seu ritmo.
           </p>
-          <WhatsAppButton
+          <SelecaoButton
             variant="solid"
             label="Quero entender como funciona →"
             className="w-full sm:w-auto"
@@ -271,7 +264,11 @@ function Landing() {
             Se você se identificou com pelo menos um desses pontos, a conversa gratuita foi feita
             para você.
           </p>
-          <WhatsAppButton variant="solid" className="w-full sm:w-auto" />
+          <SelecaoButton
+            variant="solid"
+            label="Quero preencher minha ficha →"
+            className="w-full sm:w-auto"
+          />
         </div>
       </section>
 
@@ -282,11 +279,11 @@ function Landing() {
             Pronta para dar o primeiro passo?
           </h2>
           <p className="text-[17px] leading-relaxed">
-            Clique abaixo e me chame no WhatsApp. Vou te responder pessoalmente e, se fizer sentido
-            para você, agendamos uma conversa gratuita de 30 minutos — presencial em Florianópolis e
-            região, ou online.
+            Clique abaixo e preencha sua ficha de seleção. Vou analisar pessoalmente e entrar em
+            contato para te dizer se você foi selecionada para a Sessão de Grandes Desafios gratuita
+            — presencial em Florianópolis e região, ou online.
           </p>
-          <WhatsAppButton className="w-full sm:w-auto" />
+          <SelecaoButton className="w-full sm:w-auto" />
         </div>
       </section>
 
@@ -304,9 +301,9 @@ function Landing() {
         </p>
       </footer>
 
-      {/* Botão flutuante fixo — garante WhatsApp visível sem rolar em mobile */}
+      {/* Botão flutuante fixo — garante o CTA visível sem rolar em mobile */}
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[#EDE0DA] bg-[#F5EDE8] p-3 sm:hidden">
-        <WhatsAppButton className="w-full" />
+        <SelecaoButton className="w-full" />
       </div>
     </main>
   );
