@@ -85,20 +85,11 @@ function Selecao() {
           Ficha de Seleção — Sessão de Grandes Desafios
         </h1>
         <p className="max-w-[640px] text-[17px] leading-relaxed">
-          Este é um questionário de pré-seleção para participar de uma Sessão de Grandes Desafios
-          gratuita comigo. Estou selecionando um número limitado de mulheres que possuam vontade
-          real de mudar — para ajudá-las a atingir objetivos desafiadores e eliminar o que não está
-          como gostariam em suas vidas.
+          Estou selecionando um número limitado de mulheres para uma Sessão de Grandes Desafios
+          gratuita. Responda com sinceridade — analisarei cada ficha pessoalmente.
         </p>
-        <p className="max-w-[640px] text-[17px] leading-relaxed">
-          Se você for selecionada, não terá que pagar nada por esta sessão — desde que esteja
-          disposta a se esforçar e realmente buscar crescimento e mudança. Como dedicarei horas de
-          conhecimento e ferramentas de coaching neste processo, esta seleção se faz necessária para
-          encontrar as mulheres que realmente estão comprometidas com o próprio desenvolvimento.
-        </p>
-        <p className="max-w-[640px] text-[17px] italic leading-relaxed text-[#2C2C2C]/80">
-          Em breve entrarei em contato para comunicar se você foi selecionada. Por favor, responda
-          com sinceridade.
+        <p className="max-w-[640px] text-[15px] italic leading-relaxed text-[#2C2C2C]/70">
+          Se você for selecionada, entrarei em contato em até 24 horas.
         </p>
       </section>
 
